@@ -1,0 +1,19 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch", // khi run play sẻ tạo mới một terminal
+      "name": "BE Cyber Media",
+      "skipFiles": ["<node_internals>/**"], // bỏ qua những file <--
+      "program": "${workspaceFolder}/server.js", // tìm tới file chạy đầu tiên chạy
+      "runtimeExecutable": "nodemon",
+      "console": "integratedTerminal" // internalConsole run debub console
+      // externalTerminal tự start terminal bên ngoài lên
+      // integratedTerminal tự start terminal bên trong
+    }
+  ]
+}
