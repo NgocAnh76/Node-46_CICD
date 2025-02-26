@@ -15,4 +15,5 @@ const carController = {
     }
   },
 };
+
 export default carController;
