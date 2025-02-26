@@ -14,7 +14,7 @@ jobs:
       - name: Đăng nhập vào Docker Hub
         run: docker login -u ngocanh76 -p ${{secrets.PASS_DOCKER}}
 
-      - name: Buil Image mới
+      - name: Build Image mới
         run: docker build -t ngocanh76/image-be_cyber_media:latest .
 
       - name: Push Image lên Docker Hup
