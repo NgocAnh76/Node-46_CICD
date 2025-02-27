@@ -8,10 +8,10 @@ on:
 
 jobs:
   build:
-    runs-on: node-45
+    runs-on: node_45
 
     steps:
-      - name: Xoá file .env cũ
+      - name: Xoá File .env cũ
         run: sudo rm -f .env
 
       - name: Tạo File .env mới
@@ -23,13 +23,13 @@ jobs:
           echo "REFRESH_TOKEN_EXPIRED=${{secrets.REFRESH_TOKEN_EXPIRED}}" >> .env
 
       - name: Dừng Container đang chạy
-        run: sudo docker container stop const-be_cyber_media || true
+        run: sudo docker container stop cons-be_cyber_media || true
 
-      - name: Xoá container
-        run: sudo docker container remove const-be_cyber_media
+      - name: Xoá Container
+        run: sudo docker container remove cons-be_cyber_media || true
 
-      - name: Xoá Image cũ
+      - name: Xoá Image Cũ
         run: sudo docker image remove ngocanh76/image-be_cyber_media:latest || true
 
-      - name: Chạy lại docker compose
+      - name: Chạy Lại docker compose
         run: sudo docker compose up -d

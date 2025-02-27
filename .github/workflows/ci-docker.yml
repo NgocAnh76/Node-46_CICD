@@ -11,11 +11,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Đăng nhập vào Docker Hub
+      - name: Đăng Nhập Vào Docker Hub
         run: docker login -u ngocanh76 -p ${{secrets.PASS_DOCKER}}
 
-      - name: Build Image mới
+      - name: Build Image Mới
         run: docker build -t ngocanh76/image-be_cyber_media:latest .
 
-      - name: Push Image lên Docker Hup
+      - name: Push Image Lên Docker Hub
         run: docker push ngocanh76/image-be_cyber_media:latest
